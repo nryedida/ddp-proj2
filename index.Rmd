@@ -1,0 +1,27 @@
+---
+title: "Insect Sprays - Data"
+author: "Nageswara Yedida"
+date: "July 12, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+```
+
+## Insect Sprays - Box Plot
+
+
+```{r echo = FALSE, message = FALSE}
+data(InsectSprays)
+library(ggplot2)
+library(plotly)
+g = ggplot(InsectSprays, aes(spray, count, fill = spray))
+g = g + geom_boxplot()
+ggplotly(g)
+```
+<!-- library(datasets) -->
+<!-- plot_ly(mtcars, x = mtcars$wt, y = mtcars$mpg, mode = "markers") -->
+
+## Thank You
